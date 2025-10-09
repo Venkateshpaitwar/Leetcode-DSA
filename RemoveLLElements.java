@@ -20,7 +20,7 @@ public class RemoveLLElements {
             } else {
                 current = current.next;
             }
-        }
+        }   
 
         return dummy.next;
     }

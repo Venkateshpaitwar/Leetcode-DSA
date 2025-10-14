@@ -3,7 +3,7 @@ class Solution {
         int i = a.length() - 1;
         int j = b.length() - 1;
         int carry = 0;
-        StringBuilder result = new StringBuilder();  
+        StringBuilder total = new StringBuilder();  
 
          while (i >= 0 || j >= 0 || carry != 0) {
             int sum = carry;
@@ -15,9 +15,9 @@ class Solution {
                 sum += b.charAt(j) - '0';
                 j--;
             }
-            result.append(sum % 2);
+            total.append(sum % 2);
             carry = sum / 2;
         }
-        return result.reverse().toString();
+        return total.reverse().toString();
     }
 }

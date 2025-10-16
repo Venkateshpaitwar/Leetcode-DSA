@@ -1,4 +1,3 @@
-import java.util.*;
 public class RainWaterTrap{
 
     public int trap(int[] height) {

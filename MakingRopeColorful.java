@@ -1,0 +1,16 @@
+//1578. Minimum Time to Make Rope Colorful
+
+class Solution {
+    public int minCost(String colors, int[] neededTime) {
+        char charArray[] = colors.toCharArray();
+        int n = charArray.length;
+        int totalTime = 0;
+        for(int i=1; i<n; i++){
+            if (colors.charAt(i) == colors.charAt(i - 1)) {
+                totalTime+= Math.min(neededTime[i], neededTime[i - 1]);
+                neededTime[i] = Math.max(neededTime[i], neededTime[i - 1]);
+            }
+        }
+        return totalTime;
+    }
+}

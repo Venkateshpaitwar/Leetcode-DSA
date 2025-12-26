@@ -26,5 +26,4 @@ class Solution {
         }
         return hour;
     }
-
 }

@@ -4,7 +4,6 @@ class Solution {
     public boolean isPalindrome(ListNode head) {
         if (head == null || head.next == null) return true;
 
-        // Step 1: Find middle
         ListNode slow = head;
         ListNode fast = head;
 
@@ -13,11 +12,9 @@ class Solution {
             fast = fast.next.next;
         }
 
-        // Step 2: Reverse second half
         ListNode secondHalf = reverseLL(slow);
         ListNode firstHalf = head;
 
-        // Step 3: Compare
         while (secondHalf != null) {
             if (firstHalf.val != secondHalf.val) {
                 return false;

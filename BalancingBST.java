@@ -1,6 +1,5 @@
 //1382. Balance a Binary Search Tree
 import java.util.*;
-
 class Solution {
     List<Integer> inorder = new ArrayList<>();
 

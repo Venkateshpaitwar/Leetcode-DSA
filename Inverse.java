@@ -1,3 +1,4 @@
+// Inverse the numbers and the digits 
 public class Inverse {
     public static void main(String[] args) {
         int[] arr = {3, 1, 4, 2};

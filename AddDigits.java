@@ -12,8 +12,6 @@ class Solution {
             sum = sum + mod;
             num = num/10;
         }
-            
-     
         return addDigits(sum);
     }
 }

@@ -1,5 +1,6 @@
 // 3884. First Matching Character From Both Ends
 
+
 class Solution {
     public int firstMatchingIndex(String s) {
         int n = s.length();

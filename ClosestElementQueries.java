@@ -1,5 +1,6 @@
 // 3488. Closest Equal Element Queries
 
+import java.util.*;
 class Solution {
     public List<Integer> solveQueries(int[] nums, int[] queries) {
         HashMap<Integer, List<Integer>> map = new HashMap<>();

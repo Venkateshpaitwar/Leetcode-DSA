@@ -28,3 +28,9 @@ class Solution {
         return result;
     }
 }
+
+// class Solution {
+//     public int gcdOfOddEvenSums(int n) {
+//         return n; // gcd(n, n + 1) = 1, so GCD = n
+//     }
+// }

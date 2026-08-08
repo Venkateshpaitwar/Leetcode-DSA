@@ -19,3 +19,22 @@ class Solution {
         return new ArrayList<>(set);
     }
 }
+
+// class Solution {
+//     public List<List<Integer>> subsetsWithDup(int[] nums) {
+//         Arrays.sort(nums);
+//         List<List<Integer>> ans = new ArrayList<>();
+//         findSubsets(0, nums, new ArrayList<>(), ans);
+//         return ans;
+//     }
+//     private List<List<Integer>> findSubsets(int index, int[] nums, List<Integer> subset, List<List<Integer>> ans){
+//         ans.add(new ArrayList <>(subset));
+//         for(int i = index; i < nums.length; i++){
+//             if(i != index && nums[i] == nums[i - 1]) continue;
+//             subset.add(nums[i]);
+//             findSubsets(i + 1, nums, subset, ans);
+//             subset.remove(subset.size() - 1);
+//         }
+//         return ans;
+//     }
+// }

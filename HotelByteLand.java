@@ -1,4 +1,4 @@
-// this is a codechef question rated as 1405
+// this is a codechef question rated as 1405 HotelByteLand
 import java.util.*;
 import java.lang.*;
 import java.io.*;

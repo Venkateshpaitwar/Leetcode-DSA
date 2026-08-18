@@ -1,8 +1,8 @@
 // 215. Kth Largest Element in an Array
 
+/*
 class Solution {
     public int findKthLargest(int[] nums, int k) {
-        System.gc();
         PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
         for (int i : nums) {
             pq.add(i);
@@ -13,3 +13,13 @@ class Solution {
         return pq.poll();
     }
 }
+*/
+
+/*
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        Arrays.sort(nums);
+        return nums[nums.length - k];
+    }
+} 
+*/

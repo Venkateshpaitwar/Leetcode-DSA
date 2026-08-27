@@ -1,4 +1,4 @@
-// 619. Biggest Single Number
+-- 619. Biggest Single Number
 
 # Write your MySQL query statement below
 SELECT ifnull(num, 'null') as num

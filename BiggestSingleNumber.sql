@@ -1,9 +1,10 @@
 -- 619. Biggest Single Number
 
 # Write your MySQL query statement below
-SELECT ifnull(num, 'null') as num
+SELECT MAX(num) as num
 FROM MyNumbers
-GROUP BY num
-HAVING COUNT(num) = 1
-ORDER BY num DESC
-LIMIT 1
+WHERE num IN (SELECT num   
+            FROM MyNumbers 
+            GROUP BY num 
+            HAVING COUNT(*) = 1
+            )

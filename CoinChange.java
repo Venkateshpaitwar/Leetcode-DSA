@@ -1,5 +1,5 @@
 // 322. Coin Change
-
+// Memoization 
 class Solution {
     public int coinChange(int[] coins, int amount) {
         int[][] dp = new int[coins.length][amount + 1];
@@ -29,5 +29,41 @@ class Solution {
             }
         }
         return dp[ind][target] = Math.min(take, notTake);
+    }
+}
+
+// Tabulation
+class Solution {
+    public int coinChange(int[] coins, int amount) {
+        int[] prev = new int[amount + 1];
+        int[] curr = new int[amount + 1];
+
+        for (int target = 0; target <= amount; target++) {
+            if (target % coins[0] == 0) {
+                prev[target] = target / coins[0];
+            } else {
+                prev[target] = Integer.MAX_VALUE;
+            }
+        }
+
+        for (int ind = 1; ind < coins.length; ind++) {
+            for (int target = 0; target <= amount; target++) {
+                int notTake = prev[target];
+                int take = Integer.MAX_VALUE;
+
+                if (coins[ind] <= target) {
+                    int result = curr[target - coins[ind]];
+
+                    if (result != Integer.MAX_VALUE) {
+                        take = 1 + result;
+                    }
+                }
+
+                curr[target] = Math.min(take, notTake);
+            }
+            prev = curr;
+            curr = new int[amount + 1];
+        }
+        return prev[amount] == Integer.MAX_VALUE ? -1 : prev[amount];
     }
 }
